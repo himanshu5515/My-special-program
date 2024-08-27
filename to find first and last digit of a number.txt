@@ -1,0 +1,16 @@
+public class Main{
+    public static void find(int n){
+        int lastdigit= n%10;
+        int firstdigit=0;
+        while(n>0){
+            firstdigit=n%10;
+            n=n/10;
+        }
+        System.out.println("first digit is:"+firstdigit+" \n"+"last digit is:"+lastdigit);
+    }
+
+    public static void main(String[] args) {
+        int n=12235;
+        find(n);
+    }
+}

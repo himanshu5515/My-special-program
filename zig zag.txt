@@ -1,0 +1,76 @@
+public class Ishu{
+    public static class Node{
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+            this.next=null;}
+    }
+    public static Node head;
+    public static Node tail;
+    public static int size;
+    // value given
+    public void addfirst(int data1) {
+        Node newnode = new Node(data1);
+        size++;
+        if (head == null) {
+            head = tail = newnode;
+            return;
+        }
+        newnode.next = head;
+        head = newnode;
+    }
+    public void zigzag(){
+        Node slow=head;
+        Node fast=head.next;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        Node mid=slow;
+        //reverse 2nd half
+        Node curr=mid.next;
+        mid.next=null;
+        Node prev=null;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        Node left=head;
+        Node right=prev;
+        Node nextl,nextr;
+        //alt merge-zigzag
+        while(left!=null && right!=null){
+            nextl=left.next;
+            left.next=right;
+            nextr=right.next;
+            right.next=nextl;
+            left=nextl;
+            right=nextr;
+        }
+    }
+    public void print(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Ishu hs=new Ishu();
+        hs.addfirst(5);
+        hs.addfirst(4);
+        hs.addfirst(3);
+        hs.addfirst(2);
+        hs.addfirst(1);
+   hs.print();
+   hs.zigzag();
+   hs.print();
+
+    }
+}

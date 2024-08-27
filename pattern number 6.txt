@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main{
+
+    public static void pattern(int n){
+        int numofsp=0;
+        int numofstar=5;
+
+         for(int i=1;i<=n; i++){
+             for(int j=1; j<=numofsp; j++){
+                 System.out.print("  ");}
+             for(int k=1; k<=numofstar; k++){
+                 System.out.print("*");
+             }
+             System.out.println();numofsp+=2;
+             numofstar--;
+         }
+    }
+
+    public static void main(String[] args) {
+        Scanner hs=new Scanner(System.in);
+        int n=hs.nextInt();
+        pattern(n);
+    }
+}

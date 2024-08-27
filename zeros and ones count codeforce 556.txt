@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Java2{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        String s = scanner.next();
+
+        int zeros = 0;
+        int ones = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '0') {
+                zeros++;
+            } else if (s.charAt(i) == '1') {
+                ones++;
+            }
+        }
+
+        System.out.println(n - (2 * Math.min(zeros, ones)));
+    }
+}

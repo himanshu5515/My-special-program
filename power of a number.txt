@@ -1,0 +1,19 @@
+rimport java.util.*;
+public class Main{
+        public static void powerofnum(double base,double expo){
+                double result=1;
+                for(int i=0; i<expo; i++){
+                    result*=base;
+                }
+                System.out.println("total answer is :"+result);
+        }
+
+        public static void main(String[] args) {
+                Scanner hs=new Scanner(System.in);
+                System.out.println("enter the base");
+                double base=hs.nextDouble();
+                System.out.println("enter the exponent");
+                double expo=hs.nextDouble();
+                powerofnum(base,expo);
+        }
+}

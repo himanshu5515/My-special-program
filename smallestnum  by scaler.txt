@@ -1,0 +1,24 @@
+import java.util.*;
+public class Java2 {
+    public static int smallestnum(int n){
+        String ans="";
+        for(int div=9; div>=2; div--){
+            while(n%div==0){
+                n=n/div;
+                ans=div+ans;
+            }
+        }
+        if(n!=1){
+            return -1;
+        }
+        else{
+            return Integer.parseInt(ans);
+        }
+
+    }
+    public static void main(String[] args) {
+        Scanner hs=new Scanner(System.in);
+        int n=hs.nextInt();
+        System.out.println(smallestnum(n));
+    }
+}

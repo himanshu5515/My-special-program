@@ -1,0 +1,17 @@
+import java.util.*;
+public class Ishu{
+    public static void numtostring(String arr[],int number){
+        if(number==0){return;}
+        int digitlast=number%10;
+        numtostring(arr,number/10);
+        System.out.print(arr[digitlast]+" ");
+
+    }
+
+    public static void main(String[] args) {
+        String arr[]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+        Scanner hs=new Scanner(System.in);
+        int number=hs.nextInt();
+        numtostring(arr,number);
+    }
+}
