@@ -1,0 +1,13 @@
+public class Ishu{
+  public static int    addtwo(int a,int b){
+ if(a==0){
+     return b;
+ }
+ int sum=addtwo(a-1,a+b);
+ return sum;
+  }
+
+    public static void main(String[] args) {
+        System.out.println(addtwo(5,2));
+    }
+}
