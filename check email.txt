@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main{
+        public static void check(String e_mail) {
+                String word_to_check = "@gmail.com";
+                boolean contain = e_mail.contains(word_to_check);//true per if condition others else
+
+                if (contain) {
+                        System.out.println("yes it is e_mial");
+                } else {
+                        System.out.println("not e_mail");
+                }
+        }
+
+        public static void main(String[] args) {
+                Scanner hs=new Scanner(System.in);
+                String e_mail=hs.next();
+                check(e_mail);
+        }
+}

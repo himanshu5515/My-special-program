@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner hs = new Scanner(System.in);
+        char ch;
+        int a,b;
+
+        System.out.print("enter the value of a:");
+        a=hs.nextInt();
+        System.out.print("enter the value of b");
+        b=hs.nextInt();
+        System.out.print("enter character value");
+        ch=hs.next().charAt(0);
+        switch(ch){
+            case'+':System.out.println(a+b);
+            break;
+            case'*':System.out.print(a*b);
+            break;
+            case'-':System.out.println(a-b);
+            break;
+            case'/':System.out.println(a/b);
+            break;
+            default:System.out.println("invalid methods");
+        }
+    }
+}

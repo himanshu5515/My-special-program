@@ -1,0 +1,26 @@
+public class Java2{
+public static void  removeduplicate(char arr[],int idx,boolean map[],int count){
+    if(idx==arr.length){
+        System.out.println(count);
+        return  ;
+    }
+    char currtchar=arr[idx];
+    if(map[currtchar-'a']==true){
+        removeduplicate(arr,idx+1,map,count);
+    }
+    else{
+        map[currtchar-'a']=true;
+       // count++;
+        removeduplicate(arr, idx+1, map, count+1);
+    }
+
+}
+
+    public static void main(String[] args) {
+        char arr[]={'a','b','c','a','b','d','e'};
+        int idx=0;
+         boolean map[]=new boolean[26];
+         int count=0;
+        removeduplicate(arr,idx,map,count);
+    }
+}
