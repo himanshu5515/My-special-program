@@ -1,0 +1,34 @@
+public class Main {
+    public static void main(String[] args) {
+        Horse h=new Horse();
+        Chicken c=new Chicken();
+        System.out.println(h.color);
+        System.out.println(c.color);
+        System.out.println(c.color);
+        //how to use changecolor method doubt
+    }
+}
+abstract class Animal{
+    String color;
+    Animal(){
+        color="brown";}
+    void eat(){
+        System.out.println("animal eat");
+    }
+    abstract void walk();
+}
+class Horse extends Animal{
+    void changecolor(){
+        color="dark brown";}
+    void walk(){
+        System.out.println("walk on 4 leg");
+    }
+}
+class Chicken extends Animal{
+    void changecolor(){
+        color="yello";
+    }
+    void walk(){
+        System.out.println("walks on 2 leg");
+    }
+}

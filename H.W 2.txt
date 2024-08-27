@@ -1,0 +1,115 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+     
+        Scanner s = new Scanner(System.in);
+        System.out.println("you enter in a showroom");
+        System.out.println("what you want 4 or 2 wheeler vechils");
+        int vehicleType = s.nextInt();
+        
+        if ((vehicleType == 4) || (vehicleType == 2)) {
+            
+            System.out.println("Please enter number to choose brand");
+            System.out.println("1: maruti");
+            System.out.println("2: Mahindra");
+            int company = s.nextInt();
+            switch (company) {
+                case 1:
+                    if (vehicleType == 4) {
+                        System.out.println("Please Select Car Model from below");
+                        System.out.println("1: Nano");
+                        System.out.println("2: Nexon");
+                        int tatamodel = s.nextInt();
+                        if (tatamodel == 1) {
+                            System.out.println("You Selected Nano...");
+                            System.out.println("Price: 1,75,000");
+                            System.out.println("Color: Yellow");
+                            System.out.println("Engine: 0.624 L");
+
+                        } else if (tatamodel == 2) {
+                            System.out.println("You Selected Nexon...");
+                            System.out.println("Price: 5,75,000");
+                            System.out.println("Color: Red");
+                            System.out.println("Engine: 4.624 L");
+                        } else {
+                            System.out.println("wrong entry");
+                        }
+
+                    } else if (vehicleType == 2) {
+                        System.out.println("Please Select Bike Model from below");
+                        System.out.println("1: GALAXY");
+                        System.out.println("2: UNIVERSE");
+                        int tatabike = s.nextInt();
+                        if (tatabike == 1) {
+                            System.out.println("You Selected Galaxy...");
+                            System.out.println("Price: 1,75,000");
+                            System.out.println("Color: Green");
+                            System.out.println("Engine: 1000CC");
+
+                        } else if (tatabike == 2) {
+                            System.out.println("You Selected UNIVERSE...");
+                            System.out.println("Price: 10,75,000");
+                            System.out.println("Color: Silver");
+                            System.out.println("Engine: 2500CC");
+                        } else {
+                            System.out.println("wrong entry");
+                        }
+                    } else {
+                        System.out.println("wrong entry");
+                    }
+                    break;
+                case 2:
+                    if (vehicleType == 4) {
+                        System.out.println("Please Select Car Model from below");
+                        System.out.println("1: Scorpio");
+                        System.out.println("2: Bolero");
+                        int mahimodel = s.nextInt();
+                        if (mahimodel == 1) {
+                            System.out.println("You Selected Scorpio...");
+                            System.out.println("Price: 11,75,000");
+                            System.out.println("Color: Blue");
+                            System.out.println("Engine: 1.624 L");
+
+                        } else if (mahimodel == 2) {
+                            System.out.println("You Selected Bolero.");
+                            System.out.println("Price: 16,75,000");
+                            System.out.println("Color: Red");
+                            System.out.println("Engine: 8.624 L");
+                        } else {
+                            System.out.println("wrong entry");
+                        }
+
+                    } else if (vehicleType == 2) {
+                        System.out.println("Please Select Bike Model from below");
+                        System.out.println("1: Centuro");
+                        System.out.println("2: Mojo");
+                        int mahibike = s.nextInt();
+                        if (mahibike == 1) {
+                            System.out.println("You Selected Centuro...");
+                            System.out.println("Price: 75,000");
+                            System.out.println("Color: Green");
+                            System.out.println("Engine: 1000CC");
+
+                        } else if (mahibike == 2) {
+                            System.out.println("You Selected Mojo...");
+                            System.out.println("Price: 85,000");
+                            System.out.println("Color: Silver");
+                            System.out.println("Engine: 500CC");
+                        } else {
+                            System.out.println("wrong entry");
+                        }
+                    } else {
+                        System.out.println("wrong entry");
+                    }
+
+                    break;
+                default:
+                    System.out.println("Invalid Selection");
+            }
+
+        } else {
+            System.out.println("Invalid Entry");
+        }
+
+    }}

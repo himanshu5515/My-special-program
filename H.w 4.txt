@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class qizz_bus {
+    public static void main(String[] args) {
+        int tp = 20;
+        Scanner sc = new Scanner(System.in);
+
+        int chatikara = sc.nextInt();
+        int gla = sc.nextInt();
+        int chaimuha = sc.nextInt();
+        if (tp <= chaimuha) {
+            System.out.println("sheet are full");
+        } else {
+            if (tp == chatikara) {
+                System.out.println("some sheet are avilable");
+            } else {
+                if (tp >= gla) {
+                    System.out.println("more sheet are avilable");
+                } else {
+                    System.out.println("stop are over");
+                }
+            }
+        }
+
+    }
+
+}
