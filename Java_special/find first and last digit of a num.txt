@@ -1,0 +1,13 @@
+public class Main{
+    public static void fimnd(int n){
+        int digitcount=(int)Math.log10(n);//numberof digit -1
+        int lastdigit=n%10;
+        int firstdigit=(int) (n/Math.pow(10,digitcount));
+        System.out.println("first digit is:"+firstdigit+"\n"+"last digit is:"+lastdigit);
+    }
+
+    public static void main(String[] args) {
+        int n=123456;
+        fimnd(n);
+    }
+}

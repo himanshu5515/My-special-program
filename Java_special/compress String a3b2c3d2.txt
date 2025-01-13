@@ -1,0 +1,21 @@
+public class Ishu {
+    public static String compresstring(String hsk){
+        String newhsk=" ";
+        for(int i=0; i<hsk.length(); i++){
+            Integer count=1;
+            while(i<hsk.length()-1 && hsk.charAt(i)==hsk.charAt(i+1)){
+                count++;
+                i++;
+            }
+            newhsk+=hsk.charAt(i);
+            if(count>0){
+                newhsk+=count.toString();
+            }
+        }
+        return newhsk;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(compresstring("aaabbcccdd"));
+    }
+}

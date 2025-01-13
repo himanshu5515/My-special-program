@@ -1,0 +1,15 @@
+import java .util.*;
+public class Ishu{
+    public static int  fibonacci(int n){
+// base case hai
+        if(n==1||n==0){return n;}
+        //idea 
+        int fibo=fibonacci(n-1)+fibonacci(n-2);
+      
+        return fibo;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fibonacci(10));
+    }
+}

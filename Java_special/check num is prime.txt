@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+    public static void prime(int n){
+        boolean flag=true;
+        for(int i=2; i<=n/2; i++){
+            if(n%i==0){
+                flag=false;
+            }
+        }
+        if(flag){
+            System.out.println("num is prime"+n);}
+        else{
+            System.out.println("num is not prime");
+    }}
+
+    public static void main(String[] args) {
+        Scanner hs=new Scanner(System.in);
+        int n=hs.nextInt();
+        prime(n);
+    }
+}

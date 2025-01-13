@@ -1,0 +1,23 @@
+public class Main {
+    public static String compress(String hsk){
+        String newhsk="";
+        for(int i=0; i<hsk.length(); i++) {
+            Integer count = 1;
+            while (i < hsk.length() - 1 && hsk.charAt(i) == hsk.charAt(i + 1)) {
+                count++;
+                i++;
+            }
+            newhsk += hsk.charAt(i);
+            if (count > 1) {
+                newhsk += count.toString();
+            }
+        }return newhsk;
+    }
+
+    public static void main(String[] args) {
+        String hsk="aaabbcccdd";
+        System.out.println(compress(hsk));
+    }
+
+            }
+///output a3b2c3d2

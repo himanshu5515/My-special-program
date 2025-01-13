@@ -1,0 +1,20 @@
+public class Ishu{
+    public static void dupi(String str, int idx, StringBuilder newstr,boolean map[]){
+        if(idx==str.length()){
+            System.out.println(newstr);
+            return;}
+
+        char currentchar=str.charAt(idx);
+        if(map[currentchar-'a']==true){
+            dupi(str,idx+1,newstr,map); }
+        else{
+            map[currentchar-'a']=true;
+            dupi(str,idx+1,newstr.append(currentchar),map);
+        }
+}
+
+    public static void main(String[] args) {
+      String str="himanshusharma";
+      dupi(str,0,new StringBuilder(" "), new boolean[26]);
+    }
+}

@@ -1,0 +1,48 @@
+public class Java2 {
+    public class Node{
+        int data;
+        Node next;
+        public   Node(int data1){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    public static Node slow;
+    public static  Node fast;
+    public static Node head;
+    public static Node tail;
+    public  void addlast(int data1){
+        Node newnode=new Node(data1);
+        if(head==null){
+            head=tail=newnode;
+            return;
+        }
+        tail.next=newnode;
+        tail=newnode;
+    }
+    public static boolean checkcycle(){
+         Node slow=head.next;
+        Node fast=head.next.next;
+
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        Java2 j=new Java2();
+        j.addlast(1);
+        j.addlast(2);
+        j.addlast(3);
+        j.addlast(4);
+        tail.next=head.next.next;
+
+        System.out.println(checkcycle());
+    }
+}

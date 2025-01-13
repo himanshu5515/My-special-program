@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Ishu{
+    public static void swap(ArrayList<Integer> hs,int ind1,int ind2){
+        int temp=hs.get(ind1);
+        hs.set(ind1,hs.get(ind2));
+        hs.set(ind2,temp);
+        for(int i=0; i<hs.size(); i++){
+            System.out.print(hs.get(i)+" ");
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer>hs=new ArrayList<>();
+        hs.add(1);
+        hs.add(2);
+        hs.add(3);
+        hs.add(4);
+        hs.add(5);
+        swap(hs,1,3);
+    }
+}
