@@ -1,0 +1,50 @@
+public class Java2 {
+    public static class Node{
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    public static Node head;
+    public static Node tail;
+    public static int size;
+    public static void addlast(int data){
+        Node newnode=new Node(data);
+        size++;
+        if(head==null){
+            head=tail=newnode;
+            return;
+        }
+        tail.next=newnode;
+        tail=newnode;
+    }
+    // add mid
+    public  void  addmid(int idx,int data){
+        Node newnode=new Node(data);
+        Node temp=head;
+        int i=0;
+        size++;
+        while(i<idx-1){
+            temp=temp.next;
+            i++;}
+        newnode.next=temp.next;
+        temp.next=newnode;
+    }
+
+    public static void main(String[] args) {
+     Java2 hs=new Java2();
+     hs.addlast(1);
+     hs.addlast(2);
+     hs.addlast(4);
+     hs.addmid(2,3);
+     hs.addmid(4,8);
+     Node temp=head;
+     while(temp!=null){
+         System.out.println(temp.data);
+         temp=temp.next;
+     }
+        System.out.println(size+" index");
+    }
+}

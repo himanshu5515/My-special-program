@@ -1,0 +1,17 @@
+public class Ishu{
+    public static void   mergestring(String str1,String str2){
+        StringBuilder result=new StringBuilder(" ");
+        for(int i=0; i<str1.length(); i++){
+            result.append(str1.charAt(i));
+            result.append(str2.charAt(i));
+        }
+        System.out.println(result);
+    }
+
+    public static void main(String[] args) {
+        String str1="hmnh";
+        String str2="iasu";
+        mergestring(str1,str2);
+
+    }
+}

@@ -1,0 +1,14 @@
+public class Ishu {
+    String name;
+    int id;
+    Ishu(String n,int i){
+        name=n;
+        id=i;
+    } //public String toString(){
+        //return  name+" "+id;}
+
+    public static void main(String[] args) {
+        Ishu hs=new Ishu("amit",101);
+        System.out.println(hs);
+    }
+}

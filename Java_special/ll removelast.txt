@@ -1,0 +1,64 @@
+public class Ishu{
+    public static class Node{
+        int data;
+        Node next;
+        public  Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    public static Node head;
+    public static Node tail;
+    public static int size;
+    public void addfirst(int data){
+        Node newnode=new Node(data);
+        size++;
+        if(head==null){
+            head=tail=newnode;
+            return;}
+        newnode.next=head;
+        head=newnode;
+    }
+    public int removelast(){
+        if(size==0){
+            System.out.println("ll is empty");
+            return  Integer.MIN_VALUE;
+        }
+        else if(size==1){
+            int val= head.data;
+            head=tail=null;
+            size=0;
+            return val;}
+
+        //pre: i=size-2
+        Node prev=head;
+        for(int i=0; i<size-2; i++){
+            prev=prev.next;
+        }
+        int val=prev.next.data;//tail.data;
+        prev.next=null;
+        tail=prev;
+        size--;
+  return  val;
+    }
+
+
+    public static void main(String[] args) {
+        Ishu hs=new Ishu();
+        hs.addfirst(1);
+        hs.addfirst(2);
+       hs.addfirst(3);
+       hs.addfirst(4);
+        hs.addfirst(5);
+        hs.addfirst(7);
+        hs.removelast();
+        Node temp=head;
+
+       while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println("size hai"+ " "+size);
+
+    }
+}

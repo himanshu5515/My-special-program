@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main{
+    public static  void coursefind(String course) {
+        if (course.equals("java")) {
+            System.out.println("your course  is :" + course + 1);
+        } else if (course.equals("python")) {
+            System.out.println("your course is :" + course + 2);
+        } else if (course.equals("php")) {
+            System.out.println("your course is :" + course + 3);
+        } else {
+            System.out.println("course not found");
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("plz enter your course name");
+        Scanner hs=new Scanner(System.in);
+        String course=hs.next();
+        coursefind(course);
+    }
+
+}

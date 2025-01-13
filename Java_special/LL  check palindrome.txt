@@ -1,0 +1,71 @@
+public class Ishu{
+    public static class Node{
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+            this.next=null;}
+    }
+    public static Node head;
+    public static Node tail;
+    public static int size;
+    // value given
+    public void addfirst(int data1){
+        Node newnode=new Node(data1);
+        size++;
+        if(head==null){
+            head=tail=newnode;
+            return;}
+        newnode.next=head;
+        head=newnode;}
+    // to find middle in new way
+   public  Node findmid(Node head) {
+       Node slow = head;
+       Node fast = head;
+       while (fast != null && fast.next != null) {
+           slow = slow.next;//+1
+           fast = fast.next.next;//+2
+
+       }
+       return slow;//slow is my mid
+   }
+   public boolean checkpalindrome(){
+        if(head==null || head.next==null){
+            return true;}
+        // step1 - find mid
+       Node midNode=findmid(head);
+        // step2 - reverse 2nd half
+       Node prev=null;
+       Node curr=midNode;
+       Node  next;
+       while (curr!=null){
+           next=curr.next;
+           curr.next=prev;
+           prev=curr;
+           curr=next;
+       }
+       Node right=prev;//right half head
+       Node left=head;
+       while(right!=null){
+           if(left.data!=right.data){
+               return false;
+           }
+           left=left.next;
+           right=right.next;
+
+       }
+       return true;
+   }
+
+    public static void main(String[] args) {
+        Ishu hs=new Ishu();
+        hs.addfirst(5);
+        hs.addfirst(5);
+        hs.addfirst(1);
+        hs.addfirst(5);
+        hs.addfirst(5);
+
+       System.out.println(hs.checkpalindrome());
+
+    }
+}

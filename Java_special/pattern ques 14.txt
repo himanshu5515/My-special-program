@@ -1,0 +1,24 @@
+public class Main{
+    public static void pattern(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n; j++){
+                if(j>n-i){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+            }}
+            System.out.println();}
+        //lower half
+        for(int k=1; k<n; k++){
+            for(int l=1; l<=5; l++){
+                if(l>k){
+                    System.out.print("*");
+            }else{
+                    System.out.print(" ");}
+            }
+            System.out.println();}}
+
+    public static void main(String[] args) {
+        int n=5;pattern(n);
+    }
+}

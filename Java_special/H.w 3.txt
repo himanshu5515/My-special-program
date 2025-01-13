@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public static void product(int a,int b,int c){
+        int qunty_a=200;
+        int qunty_b=300;
+        int  qunty_c=500;
+        int prize_a=25;
+        int prize_b=35;
+        int prize_c=45;
+        if(a<=qunty_a && b<=qunty_b && c<=qunty_c ){
+            System.out.println("total prize is:"+a*prize_a);
+
+            System.out.println("total prize is :"+b*prize_b);
+
+            System.out.println("total prize is :"+c*prize_c);}
+        else{
+            System.out.println("default quntity");}
+    }
+
+    public static void main(String[] args) {
+        Scanner hs=new Scanner(System.in);
+        System.out.println("plz enter your quntity of a: ");
+        int a=hs.nextInt();
+        System.out.println("plz enter your quntity of b");
+        int b=hs.nextInt();
+        System.out.println("plz enter your quntity of c");
+        int c=hs.nextInt();
+        product(a,b,c);
+    }
+}

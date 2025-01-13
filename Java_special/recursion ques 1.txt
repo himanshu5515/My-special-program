@@ -1,0 +1,19 @@
+public class Ishu{
+    public static void occurence(int arr[],int key,int n){
+        if(n==arr.length-1){
+            return;
+        }
+        if(arr[n]==key){
+            System.out.print(n+" ");
+            occurence(arr,key,n+1);
+        }
+        else{occurence(arr,key,n+1);}
+    }
+
+    public static void main(String[] args) {
+        int arr[]={1,2,3,2,4,5,2,6,7,2,9};
+        int key=2;
+        int n=0;
+        occurence(arr,key,n);
+    }
+}

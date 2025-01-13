@@ -1,0 +1,16 @@
+1->factorial
+2->fibonaci
+3->power x^n for both odd even number
+4->find maxi from array
+5->first occerance in array
+6-> last occerence in array
+7->all index of given key
+8->permutation sequence
+9->print K multiple of num k=3 num=2 output==2,4,6
+10->given n number find sum of natural number till n with alternate sign/1-2+3-4....
+11->find greatest comman divisor
+12->print sum of element in array
+13->remove all occernce of 'a' in string
+14->print reverse of string
+15->check given string is plaindrome
+16->

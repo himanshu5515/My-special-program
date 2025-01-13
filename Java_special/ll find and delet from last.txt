@@ -1,0 +1,61 @@
+  public class Ishu {
+    public static class Node{
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    public static Node head;
+    public static Node tail;
+    public static int size;
+
+    public  void addlast(int data1){
+        Node newnode=new Node(data1);
+        size++;
+        if(head==null){
+            head=tail=newnode;
+            return;}
+        tail.next=newnode;
+        tail=newnode;
+    }
+    public void deleteNthfromEnd(int n){
+        //size calculate
+        int sz=0;
+        Node temp=head;
+        while(temp!=null){
+            temp=temp.next;
+            sz++;
+        }
+        if(n==sz){
+            head=head.next;//remove first
+            return;}
+        //sz-n
+        int i=1;
+        int iTofind=sz-n;
+        Node prev=head;
+        while(i<iTofind){
+            prev=prev.next;
+            i++;
+        }
+        prev.next=prev.next.next;
+        return;
+    }
+
+      public static void main(String[] args) {
+          Ishu hs=new Ishu();
+          hs.addlast(1);
+          hs.addlast(2);
+          hs.addlast(3);
+          hs.addlast(4);
+          hs.addlast(5);
+          hs.deleteNthfromEnd(3);
+          Node temp=head;
+          while (temp!=null){
+              System.out.println(temp.data);
+              temp=temp.next;
+          }
+
+      }
+}

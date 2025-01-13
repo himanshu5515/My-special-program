@@ -1,0 +1,29 @@
+public class Main{
+    public static void pattern(int n){
+        int sub=0;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");}
+            for(int k=1; k<=n+4-sub; k++){
+                if(k>n-i){
+                    System.out.print("*");}}
+            sub+=2;
+                System.out.println();}
+        //lower half
+        int add=0;
+        for(int i=1; i<n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(" ");}
+            for(int k=1; k<=3+add; k++){
+                if(k>i){
+                    System.out.print("*");
+                }
+            }add+=2;
+            System.out.println();
+        }
+}
+
+    public static void main(String[] args) {
+        int n=5;
+        pattern(n);}
+    }

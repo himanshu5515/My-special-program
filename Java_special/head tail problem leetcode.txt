@@ -1,0 +1,18 @@
+public class Ishu{
+    public static void lappuse(int n,String lastdigit,String str){
+        if(n==0){
+            System.out.println(str);
+            return;}
+
+        lappuse(n-1,"H",str+"H");
+
+        if(lastdigit=="H"){
+            lappuse(n-1,"T",str+"T");
+        }
+    }
+
+    public static void main(String[] args) {
+        int n=3;
+        lappuse(n,"H"," ");
+    }
+}
