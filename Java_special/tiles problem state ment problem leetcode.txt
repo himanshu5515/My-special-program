@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main{
+    public static int tilse(int m, int n, int a){
+        int ma=0;
+        int na=0;
+        ma=m/a;
+        na=n/a;
+        if(m%a!=0){
+            ma++;}
+        if(n%a!=0){
+            na++;}
+        return ma*na;
+    }
+
+    public static void main(String[] args) {
+        Scanner hs=new Scanner(System.in);
+        int m=hs.nextInt();
+        int n=hs.nextInt();
+        int a=hs.nextInt();
+        System.out.println(tilse(m,n,a));
+    }
+}

@@ -1,0 +1,23 @@
+public class Main{
+    public static String touppercase(String hsk){
+        StringBuilder hs=new StringBuilder(" ");
+        char ch=Character.toUpperCase(hsk.charAt(0));
+        hs.append(ch);
+        for(int i=1; i<hsk.length(); i++) {
+            if (hsk.charAt(i)== ' ' && i < hsk.length() - 1) {
+                hs.append(hsk.charAt(i));
+                i++;
+                hs.append(Character.toUpperCase(hsk.charAt(i)));
+            }
+            else {
+                hs.append((hsk.charAt(i)));
+            }
+        } return hs.toString();
+
+            }
+
+    public static void main(String[] args) {
+        String hsk="hi,i am himanshu";
+        System.out.println(touppercase(hsk));
+    }
+        }
